@@ -11,36 +11,30 @@
 
 <h2>Choose a burger to devour!</h2>
 
+{{!-- https://git.heroku.com/arcane-hollows-47417.git --}}
+
+
+
 <ul>
-			  {{#each burgers}}
-			    {{#unless this.devoured}}
-			      <li>
-			      	{{this.id}}
-			        {{this.burger_name}}
-
-			        <form action="/{{this.id}}?_method=PUT" method="POST">
-			          <input type="hidden" name="devoured" value="true">
-			          <button class="btn-primary" type="submit">Devour It!</button>
-			        </form>
-
-			      </li>
-			    {{/unless}}
-			  {{/each}}
-			</ul>
-
-{{!-- <ul>
   {{#each burgers}}
-    {{#unless this.devoured}}
+    {{#unless devoured}}
     <li>
-      {{this.id}}
-      {{this.burger_name}}
+      {{burger_name}}
     </li>
     {{/unless}}
   {{/each}}
-</ul> --}}
+</ul>
 
 <h2>Burgers that you've demolished:</h2>
 
+
+{{!-- Per Chris I'm sudocoding what needs to be done and turning in what I have.
+      I don't understand why the above doesn't display what I need. Based on the activities it should work but I've obviously missed something. Current code was referenced from in class activities. 
+      -- Make a section for devoured burgers and section to add burgers
+      -- Add delete button to devour burger
+      -- Add some styling to make it not look like 1990s
+      -- Redeploy to Heroku
+       --}}
 {{!-- <ul>
   {{#each burgers}}
     {{#if devoured}}
@@ -49,21 +43,4 @@
   {{/each}}
 </ul>
 
-<h2>Add a burger you'd like to eat</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="burge">Burger Name:</label>
-    <input type="text" id="burge" name="name">
-  </div>
-
-  <div class="form-group">
-    <label for="devoure">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-    <input type="radio" name="devoured" value="0"> To be devoured...
-  </div>
-
-  <button type="submit">Add Burger</button>
-</form>
-</body>
-</html> --}}
+<
